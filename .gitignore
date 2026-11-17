@@ -1,0 +1,14 @@
+# Configuração com senhas do banco: NUNCA enviar ao GitHub
+config.ini
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+
+# Pacotes compactados
+*.zip
+
+# Arquivos do sistema e do editor
+.vscode/
+Thumbs.db
+desktop.ini

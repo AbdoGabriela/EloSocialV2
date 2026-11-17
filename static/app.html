@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elo Social</title>
+    <link rel="icon" href="/static/img/logo-elosocial.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="marca">
+                <img src="/static/img/logo-elosocial.png" alt="Elo Social">
+            </div>
+            <nav>
+                <div class="grupo">Principal</div>
+                <a class="item" href="#/" data-rota="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    Dashboard
+                </a>
+
+                <div class="grupo">Equipamentos</div>
+                <a class="item" href="#/equipamento/1" data-rota="equipamento-1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Residência Inclusiva
+                </a>
+                <a class="item" href="#/equipamento/2" data-rota="equipamento-2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.6.8 2.7 2.5 3 5.2"/></svg>
+                    SAICA
+                </a>
+                <a class="item" href="#/equipamento/3" data-rota="equipamento-3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 7v14M14 7v14"/></svg>
+                    Centro Provisório
+                </a>
+
+                <div class="grupo">Controle</div>
+                <a class="item" href="#/medicacao" data-rota="medicacao">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="m8.5 8.5 7 7"/></svg>
+                    Controle de Medicação
+                </a>
+
+                <div id="menu-admin" hidden>
+                    <div class="grupo">Administração</div>
+                    <a class="item" href="#/usuarios" data-rota="usuarios">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></svg>
+                        Usuários e senhas
+                    </a>
+                </div>
+            </nav>
+            <div class="usuario">
+                <strong id="usuario-nome">...</strong>
+                <span id="usuario-equipamento"></span>
+                <div class="selo" id="usuario-ocupacao"></div>
+                <button class="btn btn-secundario btn-pequeno" id="botao-senha">Alterar senha</button>
+                <button class="btn btn-secundario btn-pequeno" id="botao-sair">Sair</button>
+            </div>
+            <div class="copy">EloSocial © 2026</div>
+        </aside>
+
+        <main class="conteudo" id="conteudo"></main>
+    </div>
+
+    <!-- Janela (modal) usada para cadastrar e editar -->
+    <div class="modal-fundo" id="modal-fundo">
+        <div class="modal">
+            <h3 id="modal-titulo"></h3>
+            <div id="alerta" class="alerta"></div>
+            <form id="modal-form" novalidate>
+                <div id="modal-campos"></div>
+                <div class="botoes">
+                    <button type="button" class="btn btn-secundario" id="modal-cancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primario" id="modal-salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="/static/js/comum.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

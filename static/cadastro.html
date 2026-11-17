@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário | Elo Social</title>
+    <link rel="icon" href="/static/img/logo-elosocial.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <main class="tela-acesso">
+        <div class="caixa-acesso larga">
+            <img class="logo" src="/static/img/logo-elosocial.png" alt="Elo Social">
+            <h1>Cadastro de Usuário</h1>
+            <p class="sub">Crie o acesso de um funcionário do equipamento</p>
+
+            <div id="alerta" class="alerta"></div>
+
+            <form id="form-cadastro" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" maxlength="100" placeholder="Nome e sobrenome" required>
+                </div>
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="data_nasc">Data de nascimento</label>
+                        <input type="date" id="data_nasc" name="data_nasc" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" maxlength="150" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                </div>
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="equipamento">Equipamento em que trabalha</label>
+                        <select id="equipamento" name="equipamento" required>
+                            <option value="">Carregando...</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="ocupacao">Ocupação</label>
+                        <select id="ocupacao" name="ocupacao" required>
+                            <option value="">Selecione</option>
+                            <option value="Coordenador">Coordenador</option>
+                            <option value="Assistente Social">Assistente Social</option>
+                            <option value="Cuidador">Cuidador</option>
+                            <option value="Psicólogo">Psicólogo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grade-2">
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" minlength="6" autocomplete="new-password" required>
+                        <span class="dica">Mínimo de 6 caracteres</span>
+                    </div>
+                    <div class="campo">
+                        <label for="confirma">Confirmar senha</label>
+                        <input type="password" id="confirma" name="confirma" autocomplete="new-password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primario btn-bloco">Cadastrar</button>
+            </form>
+
+            <p class="rodape">Já tem acesso? <a href="/">Entrar</a></p>
+        </div>
+    </main>
+    <script src="/static/js/comum.js"></script>
+    <script src="/static/js/cadastro.js"></script>
+</body>
+</html>
