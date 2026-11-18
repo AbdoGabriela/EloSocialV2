@@ -54,5 +54,5 @@ Na atividade AC4 – Desafio Final, da disciplina Server and Data Center Adminis
 
 Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas da UniFECAF, Taboão da Serra, 2026.
 
-- **Versão 1.0 (Projeto Integrador):** Gabriela Marina Abdo e Misael Dias Caboclo
-- **Versão 2.0 (AC4 – Server and Data Center Administration):** Gabriela Marina Abdo
+- **Versão 1.0 (Projeto Integrador):** Gabriela Abdo e Misael Dias Caboclo
+- **Versão 2.0 (AC4 – Server and Data Center Administration):** Gabriela Abdo
